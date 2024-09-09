@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Dhir Thacker Portfolio</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+
+
+
+<style>
+
+/*======================================
+//--//-->   ABOUT
+======================================*/
+
+.about-mf .box-shadow-full {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.about-mf .about-img {
+  margin-bottom: 2rem;
+}
+
+.about-mf .about-img img {
+  margin-left: 10px;
+}
+
+
+.skill-mf .progress {
+  /* background-color: #cde1f8; */
+  margin: .5rem 0 1.2rem 0;
+  border-radius: 0;
+  height: .7rem;
+}
+
+.skill-mf .progress .progress-bar {
+  height: .7rem;
+  background-color: #ffbd39;
+}
+
+
+/* Animation styles */
+#typing-animation {
+  position: relative;
+  font-size: 20px;
+  font-weight: bold;
+  color: #ffbd39;
+ /* color: rgb(255, 255, 255); */
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 3s steps(20, end) infinite;
+}
+
+#typing-animation:before {
+  content: "";
+  /* position: absolute; */
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: #ccc;
+  animation: typing-cursor 0.5s ease-in-out infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes typing-cursor {
+  from {
+    width: 5px;
+  }
+  to {
+    width: 0;
+  }
+}
+
+
+/* project image zoom effect */
+
+.zoom-effect {
+  overflow: hidden;
+  transition: transform 0.3s ease-out;
+}
+
+.zoom-effect:hover {
+  transform: scale(1.1);
+}
+
+
+</style>
+
+
+  </head>
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+	  
+	  
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
+	    <div class="container">			
+<!--		  <a class="nav-item" href="#home">Hero</a>  -->
+	      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav nav ml-auto">
+	          <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li> 
+	          <li class="nav-item"><a href="#experience-section" class="nav-link"><span>Experience</span></a></li>
+	          <li class="nav-item"><a href="#project-section" class="nav-link"><span>Projects</span></a></li>
+			  <li class="nav-item"><a href="#publication-section" class="nav-link"><span>Publication</span></a></li>
+	          <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
+
+	<!-- Home section -->
+
+    <section class="ftco-about img ftco-section ftco-no-pb" id="home-section">
+    	<div class="container">
+			<div class="row">
+				<div class="row d-flex align-items-stretch">
+				<!-- <div class="row d-flex"> -->
+					<div class="col-md-6 col-lg-5 d-flex">
+						<div class="img-about img d-flex align-items-stretch">
+							<div class="overlay pl-3 pr-3">
+								<div class="row">
+									<div class="col-sm-6 col-md-5">
+									  <div class="about-img">
+										<img src="images/Dhir-circular-no-bg.png" class="img-fluid rounded b-shadow-a" alt="">
+									  </div>
+									</div>
+									<!-- Details next to profile image -->
+									<div class="col-sm-6 col-md-7">
+									  <div class="about-info text">
+										<h5 class="title-s subheading"> <span><b>Dhir Thacker</b></span></h5>
+										<h5 class="title-s subheading">
+										<!-- Element to contain animated typing -->
+											<span id="typing-animation"></span>
+											<script>
+
+												// Initialize the typing animation
+												const typingAnimationElement = document.getElementById('typing-animation');
+
+												// Create an array of typing text
+												const typingTexts = [
+												'Grad Student',
+												'Data Engineer',
+												'Business Analyst'
+												];
+
+												// Create a function to display the typing animation for a given text
+												function playTypingAnimation(text) {
+												// Loop through each character and add it to the element
+												for (let i = 0; i < text.length; i++) {
+													setTimeout(() => {
+													typingAnimationElement.textContent += text[i];
+													}, i * 200); // Increase the delay to slow down the typing animation
+												}
+
+												// Once the animation is complete, reset the text and start over
+												setTimeout(() => {
+													typingAnimationElement.textContent = '';
+													playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
+												}, text.length * 200);
+												}
+
+												// Start the typing animation loop
+												playTypingAnimation(typingTexts[0]);
+
+											</script>
+										</h5>
+										<h5><span class="title-s subheading"><b>Experience: </b></span> <span><b>2+ Years</b></span></h5>
+										<!-- class="align-items-center" -->
+										<ul class="ftco-footer-social list-unstyled d-flex m1 mb-0">
+											<li class="ftco-animate"><a href="http://linkedin.com/in/dhirthacker7/" title="LinkedIn"><span class="icon-linkedin"></span></a></li> 
+											<li class="ftco-animate"><a href="http://www.github.com/dhirthacker7/" title="Github"><span class="icon-github"></span></a></li>
+											<li class="ftco-animate"><a href="https://www.instagram.com/dheer__thacker/" title="Instagram"><span class="icon-instagram"></span></a></li>
+										</ul>
+									  </div>
+									</div>
+								</div>
+								
+
+								<br>
+
+								<div class="skill-mf">
+									<p class="title-s"><b>SKILLS</b></p>
+									<span>SQL</span> <span class="pull-right">85%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 85%;" aria-valuenow="85" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>PYTHON</span> <span class="pull-right">80%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>Data Visualization</span> <span class="pull-right">80%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>Statistical Analysis</span> <span class="pull-right">85%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>Machine Learning</span> <span class="pull-right">75%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
+						<div class="row justify-content-start pb-3 pl-3 pr-3">
+							<div class="col-md-12 heading-section ftco-animate">
+								<br>
+								<p>With over 2 years of experience in the tech industry, I specialize in analyzing data to uncover valuable insights. 
+									My work includes refining data processes, optimizing system efficiency, and developing data-driven solutions focused on 
+									business intelligence and scalability. My attention to detail ensures accuracy and effectiveness in my projects. 
+									I thrive in collaborative environments and excel at turning complex data into actionable outcomes.
+								</p>
+								<br>
+								<br>
+								<ul class="about-info mt-1 px-md-0 px-1 pl-3 pr-3">
+
+									<li class="d-flex"><span>Profile:</span> <span>Data Analysis &amp; Data Engineering</span></li>
+									<li class="d-flex"><span>Programming languages:</span> C++, Python, SQL, PL/SQL, JavaScript, R</span></li>
+									<li class="d-flex"><span>Databases:</span> <span>MSSQL server, MySQL, Oracle, MongoDB</span></li>
+									<li class="d-flex"><span>BI Tools:</span> <span>Microsoft Power BI, Tableau, Alteryx, Talend, MATLAB, ER Studio, Azure Data Studio</span></li>
+									<li class="d-flex"><span>Libraries:</span> <span>Numpy, Pandas, Matplotlib, Seaborn, Scikit-learn, Statsmodel, Tensorflow </span></li>
+									<li class="d-flex"><span>Other Tools:</span> <span>Git, R studio, MS Excel, JIRA</span></li>
+									
+								</ul>
+							</div>
+						</div>
+
+
+					<!--<div class="counter-wrap ftco-animate d-flex mt-md-3 pl-3 pr-3">
+							<div class="text">
+								<p><a href="http://linkedin.com/in/dhirthacker7/" class="btn btn-primary py-3 px-4">LinkedIn</a></p>
+							</div>
+						</div>
+					-->
+					</div>
+				</div>
+			</div>
+		</div>
+    </section>
+
+	<!-- Resume section -->
+	<br>
+	<br>
+	<br>
+    <section class="ftco-section ftco-no-pb ftco-no-pt" id="experience-section">
+    	<div class="container">
+    		<div class="row justify-content-center pb-5">
+          		<div class="col-md-10 heading-section text-center ftco-animate">
+            		<h2 class="mb-2">Experience</h2>
+          		</div>
+				<div class="underline"></div>
+        	</div>
+
+		<!--<div class="underline"></div>-->
+
+			<br>
+		
+			<div class="row">
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">January 2023 - August 2023</span>
+						<br>
+						<span class="position">Infosys Limited</span>
+						<h2>Associate Business Analyst</h2>
+						<p class="mt-4">Infosys is India's second biggest IT company, offering business consultancy services, IT, and outsourcing. 
+							<ul>  
+								<li>Acted as the primary liaison between stakeholders and application teams, driving collaboration to enhance business intelligence.</li>
+								<li>Achieved 20% scalability growth optimizing SAP systems to handle increased workload and performed database maintenance.</li>
+								<li>Boosted system performance by 30% with upgrades and performing Windows and LINUX/UNIX Filesystem administration.</li>
+								<li>Reduced daily processing times by 20%, facilitating data integration across multiple platforms, streamlining business processes and enhancing data flow and consistency.</li>								
+							</ul>
+						</p>
+					</div>
+				</div>
+
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">June 2022 - October 2022</span>
+						<br>
+						<span class="position">Tata Consultancy Services</span>
+						<h2>Systems Engineer</h2>
+						<p class="mt-4">Tata Consultancy Services is the largest IT company in India, providing business analytics solutions and consulting services.. 
+							<ul>
+								<li>Performed data migration and system maintenance activities, ensuring minimal downtime and improving system reliability.</li>
+								<li>Increased client satisfaction by 25% decrease in user-reported issues, prioritizing incident resolution, effectively handling SAP OSS incidents.</li>
+							</ul>
+						</p>
+						<span class="date">July 2021 - May 2022</span>
+						<h2>Assistant Systems Engineer</h2>
+						<p class="mt-4"> 
+							<ul>
+								<li>Enhanced system security, reducing unauthorized access by 40% by analyzing business user requirements and enhancing user access roles .</li>
+								<li>Documented processes, delivering weekly status reports and providing training and knowledge transfer to new hires for smooth integration.</li>
+							</ul>
+						</p>
+					</div>
+				</div>
+
+			</div>
+
+			<div class="row">
+				<h1 class="big-4">Education</h1>
+			<!--<div class="underline"></div>-->
+			</div>
+			<br>
+		
+			<div class="row">
+    			
+				<div class="col-md-6">
+    				<div class="resume-wrap ftco-animate">
+    					<span class="date">September 2023 - Present</span>
+    					<h2>Master of Science in Information Systems</h2>
+    					<span class="position">Northeastern University</span>
+    				</div>
+				</div>
+				
+				<div class="col-md-6">
+    				<div class="resume-wrap ftco-animate">
+    					<span class="date">July 2017 - May 2021</span>
+    					<h2>Bachelor of Techonology in Computer Science and Engineering</h2>
+    					<span class="position">Symbiosis International University</span>
+    				</div>
+    			</div>
+
+    		</div>
+
+    	</div>
+    </section>
+
+	<br>
+
+	<!-- Project section -->
+
+    <section class="ftco-section ftco-no-pt" id="project-section">
+      	<div class="container">
+        	<div class="row justify-content-center mb-4 pb-4">
+          		<div class="col-md-7 heading-section text-center ftco-animate">
+            		<h2 class="mb-2">Projects</h2>  
+				</div>
+				<div class="underline"></div>
+        	</div>
+
+		<!-- row1 -->
+        	<div class="row d-flex">
+			<!-- p1 -->
+				<div class="col-md-4 d-flex ftco-animate">
+          			<div class="blog-entry justify-content-end resume-wrap">
+              			<a href="https://github.com/dhirthacker7/Motor_Vehicle_Collisions" class="block-20 zoom-effect" style="background-image: url('images/Motor_Vehicle_Collisions.png');">
+              			</a>
+            			<div class="text mt-3 float-right d-block">
+                			<h3 class="heading"><a href="https://github.com/rishabhnmishra/SQL_Music_Store_Analysis/blob/main/Music_Store_Query.sql">Motor Vehicle Collisions</a></h3>
+                			<p>Obtained crash data from NY, Austin and Chicago DOT (Department of transportation) website.
+								Performed extensive data transformation and implemented data warehousing concepts using Talend.
+							</p>
+              			</div>
+            		</div>
+          		</div>
+
+			<!-- p2 -->
+    	      	<div class="col-md-4 d-flex ftco-animate">
+        	  		<div class="blog-entry justify-content-end resume-wrap">
+            	  		<a href="https://github.com/dhirthacker7/Remote-Counselling-management-system" class="block-20 zoom-effect" style="background-image: url('images/Remote_Counselling.png');">
+              			</a>
+              			<div class="text mt-3 float-right d-block">
+			                <h3 class="heading"><a href="https://github.com/rishabhnmishra/Python_Diwali_Sales_Analysis/blob/main/Diwali_Sales_Analysis.ipynb">Remote Counselling Management System</a></h3>
+    	    		        <p>Designed and implemented a comprehensive MSSQL database for an online counseling system, creating 
+								ER diagrams, stored procedures, UDFs, views, triggers, non-clustered indexes, data encryption, and a Tableau dashboard for data visualization.
+							</p>
+        	      		</div>
+            		</div>
+          		</div>
+          
+			<!-- p3 -->
+				<div class="col-md-4 d-flex ftco-animate">
+    	      		<div class="blog-entry resume-wrap">
+        	      		<a href="https://github.com/dhirthacker7/British_Airways_Review_Tableau/blob/main/British%20Airways%20Review.pdf" class="block-20 zoom-effect" style="background-image: url('images/British_Airways_Review.png');">
+            	  		</a>
+              			<div class="text mt-3 float-right d-block">
+		                	<h3 class="heading"><a href="https://github.com/rishabhnmishra/Madhav_Store_Analysis_PowerBI/blob/main/Madhav%20Store%20dashboard.jpg">British Airways Review</a></h3>
+	        	        	<p>Developed an interactive Tableau dashboard for visualizing key airline performance metrics, integrating maps, line charts, and bar charts to enhance user engagement and data accessibility.
+								Designed parameters, calculated fields, and custom metrics, enabling effective analysis of performance indicators.
+							</p>
+    	            	</div>
+        	    	</div>
+          		</div>
+
+        	</div>
+
+		<br>
+		<!-- row2 -->
+		
+			<div class="row d-flex justify-content-center">  
+
+				<!-- p4 -->
+				<div class="col-md-4 d-flex ftco-animate">
+					<div class="blog-entry justify-content-end resume-wrap">
+						<a href="https://github.com/dhirthacker7/Store_Sales_Forecasting" class="block-20 zoom-effect" style="background-image: url('images/store_sales_forecasting.jpg');">
+						</a>
+						<div class="text mt-3 float-right d-block">
+				  			<h3 class="heading"><a href="https://github.com/rishabhnmishra/sales_forecasting/tree/main">Store Sales Forecasting</a></h3>
+				  			<p>Enhanced exploratory data analysis by cleaning and preprocessing data using Python, Numpy, and Pandas, and developed machine learning models to predict sales based on transactions, promotions, holidays, and economic factors.
+								Improved inventory management and sales strategies by developing regression and time-series models, improving prediction accuracy through hyperparameter tuning.
+							</p>
+						</div>
+			  		</div>
+				</div>
+
+				<!-- p5 -->
+				<div class="col-md-4 d-flex ftco-animate">
+					<div class="blog-entry justify-content-end resume-wrap">
+						<a href="https://github.com/dhirthacker7/twitter_sentiment_analysis" class="block-20 zoom-effect" style="background-image: url('images/sentiment_analysis.jpg');">
+						</a>
+						<div class="text mt-3 float-right d-block">
+							<h3 class="heading"><a href="https://github.com/rishabhnmishra/customer_segmentation/blob/main/Customer_Segmentation-final.ipynb">Twitter Sentiment Analysis</a></h3>
+				  			<p>
+								The project involves performing Sentiment Analysis by first tokenizing and cleaning text data, removing stopwords, and classifying words as positive(+1), negative(-1), or neutral(0).
+								A supervised machine learning model is trained using a Bag of Words or lexicon to classify sentiment, and the final sentiment score is calculated based on word polarity.
+							</p>
+						</div>
+			  		</div>
+				</div>
+
+				<!-- p6 -->
+				<div class="col-md-4 d-flex ftco-animate">
+					<div class="blog-entry resume-wrap">
+						<a href="https://github.com/dhirthacker7/react_codepen" class="block-20 zoom-effect" style="background-image: url('images/sentiment_analysis.jpg');">
+						</a>
+						<div class="text mt-3 float-right d-block">
+							<h3 class="heading"><a href="https://github.com/rishabhnmishra/customer_segmentation/blob/main/Customer_Segmentation-final.ipynb">React codepen</a></h3>
+							<h2 class="heading"><a href="https://dhirthacker7.github.io/react_codepen/" title="Click to view demo" class="btn btn-primary py-2 px-4">Demo</a></h2>
+				  			<p>
+								This is an interactive application where users can write HTML, CSS, JavaScript (including React) and see the results in real-time.
+								Commonly used for prototyping, sharing code snippets, learning React concepts, and showcasing front-end development skills in an interactive environment.
+							</p>
+						</div>
+			  		</div>
+				</div>
+
+			</div>
+
+		</div>
+
+		<div class="row justify-content-center mt-5">
+			<div class="col-md-6 text-center ftco-animate">
+				<h2>More projects on <span style="color: #ffbd39;"><b>Github</b></span></h2>
+				<br>
+				<h2 class="heading"><a href="http://www.github.com/dhirthacker7/" title="Click to go to my Github profile" class="btn btn-primary py-3 px-4">GitHub</a></h2>
+			</div>
+		</div>
+
+    </section>
+
+	<!-- Publication section -->
+
+    <section class="ftco-section contact-section ftco-no-pt ftco-no-pb" id="publication-section">
+      	
+		<div class="container">
+      		
+			<div class="row justify-content-center mb-5 pb-3">
+          		<div class="col-md-7 heading-section text-center ftco-animate">
+           			<!-- <h1 class="big big-2">Contact</h1> -->
+            		<h2 class="mb-2">Publication</h2>
+          		</div>
+    		    <div class="underline"></div>
+        	</div>
+
+
+			<!--
+			<div class="row d-flex">
+				<div class="col-md-4 d-flex ftco-animate">
+					<div class="blog-entry justify-content-end resume-wrap">
+						<a href="https://github.com/dhirthacker7/Motor_Vehicle_Collisions" class="block-20 zoom-effect" style="background-image: url('images/Motor_Vehicle_Collisions.png');">
+						</a>
+					<div class="text mt-3 float-right d-block">
+						<h3 class="heading"><a href="https://github.com/rishabhnmishra/SQL_Music_Store_Analysis/blob/main/Music_Store_Query.sql">Motor Vehicle Collisions</a></h3>
+						<p>Obtained crash data from NY, Austin and Chicago DOT (Department of transportation) website.
+							Performed extensive data transformation and implemented data warehousing concepts using Talend.
+						</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			-->
+
+
+
+			<div class="row d-flex justify-content-center">
+				<div class="col-md-6 d-flex ftco-animate">
+					<div class="blog-entry justify-content-end resume-wrap">
+						<a href="https://github.com/Ayush412/KILO" class="block-20 zoom-effect" style="background-image: url('images/KILO.png');">
+						</a>
+						<div class="text mt-3 float-right d-block justify-content-center">
+							<h1 class="heading"><a href="https://github.com/Ayush412/KILO">Digital Music Store Data Analysis using SQL</a></h3> 
+							<h3 class="heading"><a href="https://tarupublications.com/doi/10.47974/JIOS-1044"><span style="color: #ffbd39;">Journal of Information and Optimization Sciences</span></a></h3>
+							<p>Developed KILO, a fitness app that tracks workouts, monitors calories, and rewards users with achievement badges for physical activity.
+								Developed a Flutter application integrated with Firebase services, featuring a yoga pose-estimation machine-learning model directly on the device, demonstrating research and innovation with Pose Net technology.
+							</p>
+						</div>
+					</div>					
+				</div>
+			</div>
+		</div>
+		
+	</section>
+	
+	<br>
+	<br>
+
+	<!-- Contact section -->
+
+	<section class="ftco-section contact-section ftco-no-pt ftco-no-pb" id="contact-section">
+		<div class="container">
+
+			<div class="row justify-content-center mb-2 pb-2">
+				<div class="col-md-7 heading-section text-center ftco-animate">
+					<h2 class="mb-2">Contact</h2>
+				</div>
+			</div>
+
+			<ul class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-0">
+				<li class="ftco-animate"><a href="tel://8579619543" title="Call: +1(857) 961-9543"><span class="icon-phone2"></span></a></li> 
+				<li class="ftco-animate"><a href="mailto:dhirthacker7@gmail.com" title="Email to: dhirthacker7@gmail.com"><span class="icon-paper-plane"></span></a></li>
+<!--				<li class="ftco-animate"><a href="https://www.instagram.com/dheer__thacker/" title="Instagram: dheer__thacker"><span class="icon-instagram"></span></a></li> -->
+				<li class="ftco-animate"><a href="https://public.tableau.com/app/profile/dhir.thacker/vizzes/" title="Tableau Public: dhir.thacker"><span class="icon-bar-chart"></span></a></li>
+			
+			</ul>
+
+			<div class="row justify-content-center mt-4 pb-2 block-20 zoom-effect" style="background-image: url('images/minions-no-bg.gif');">
+				<div class="col-md-9 heading-section text-center ftco-animate">
+				</div>
+			</div>
+
+   		</div>
+ 	</section>
+	
+    <footer class="ftco-footer ftco-section">
+		<div class="container">
+		
+		<div class="underline-footer"></div>
+
+		<div class="row">
+			<div class="col-md-12 text-center">
+			<br>
+			  	<p"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+	 				&copy; <script>document.write(new Date().getFullYear());</script> Dhir Thacker
+					<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+				</p>
+			</div>
+		  </div>
+		</div>
+	  </footer>
+
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/scrollax.min.js"></script>
+  
+  <script src="js/main.js"></script>
+    
+  </body>
+</html>
