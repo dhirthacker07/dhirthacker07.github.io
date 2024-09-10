@@ -9321,11 +9321,22 @@ textarea.form-control {
   overflow: hidden;
   background-size: contain;
   background-repeat: no-repeat;
-  background-position: center center;
+  background-position: left center;
   position: relative;
   display: block;
   width: 100%;
   height: 180px; }
+
+.block-20-center {
+  overflow: hidden;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 180px;
+}
 
 .block-publication {
   overflow: hidden;
