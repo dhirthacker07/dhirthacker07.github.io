@@ -33,7 +33,7 @@ html {
 body {
 	font-family: $font-primary;
 	background: $black;
-	font-size: 14px;
+	font-size: 15px;
 	line-height: 1.8;
 	font-weight: 400;
 	color: lighten($black,60%);
@@ -383,8 +383,8 @@ h1, h2, h3, h4, h5,
 				left: -2px;
 				right: 0;
 				bottom: 0;
-				width: 14px;
-				height: 14px;
+				width: 15px;
+				height: 15px;
 				content: '';
 				border:1px solid rgba(255,255,255,.3);
 				@include border-radius(50%);
@@ -510,7 +510,7 @@ h1, h2, h3, h4, h5,
 				.subheading{
 					color: $black;
 					font-weight: 600;
-					font-size: 14px;
+					font-size: 15px;
 					letter-spacing: 3px;
 					text-transform: uppercase;
 					color: $primary;
@@ -870,13 +870,11 @@ h1, h2, h3, h4, h5,
 	background: rgba(12, 12, 12, 1);
 	padding: 40px;
 	@include border-radius(5px);
-	.date{
-		font-weight: 450;
+	.font_subheading{
 		font-size: 21px;
-		color: $primary;
 	}
-	.date_uni {
-		font-weight: 450;
+	.date{
+		font-weight: 360;
 		font-size: 18px;
 		color: $primary;
 	}
@@ -1880,7 +1878,7 @@ textarea.form-control {
 		margin-bottom: 0;
 		input {
 			padding-right: 50px;
-			font-size: 14px;
+			font-size: 15px;
 		}
 	}
 	.icon {
